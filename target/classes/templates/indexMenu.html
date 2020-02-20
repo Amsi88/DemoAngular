@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="#{application.title}"></title>
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+	<link rel="stylesheet" th:href="@{/css/navbar-fixed-left.min.css}"/>
+	
+</head>
+<body>
+	
+	<div th:replace="fragments/menu :: menu"></div>
+	
+<!-- 	<main role="main" class="flex-shrink-0"> -->
+		  <div class="container">
+		  	<form th:action="@{/logout}" method="post">
+				<div id="signupbox" style="margin-top: 50px"
+					class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<span th:text="#{value.form.userDetail}">1</span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div id="div_id_name" class="form-group row">
+								<label class="control-label col-md-4  requiredField"><span
+									th:text="#{value.form.userName}"></span></label>
+								<div class="controls col-md-8">
+									<th:p th:text="${userDto.usName}" />
+								</div>
+							</div>
+							<div id="div_id_rol" class="form-group row">
+								<label class="control-label col-md-4  requiredField" for="usRol"><span
+									th:text="#{value.form.rol}"></span></label>
+								<div class="controls col-md-8">
+									<th:p th:text="${userDto.usRol}" />
+								</div>
+							</div>
+							<div id="div_id_usLogin" class="form-group row">
+								<label class="control-label col-md-4  requiredField"
+									for="usLogin"><span th:text="#{value.form.login}"></span></label>
+								<div class="controls col-md-8">
+									<th:p th:text="${userDto.usLogin}" />
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="aab controls col-md-4 "></div>
+								<div class="controls col-md-8 ">
+									<button type="submit" id="buttonLogout" class="btn btn-primary">
+										<span th:text="#{value.button.logout}"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+<!-- 	</main> -->
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+	<link rel="stylesheet" th:href="@{/css/navbar-fixed-left.min.css}"/>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-left bg-dark " th:fragment="menu">
+		<span class="navbar-brand">ISS - Master Data</span>
+		
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li><hr></li>
+				<li class="nav-item active">
+					<a class="nav-link" href="indexMenu">Home</a>
+				</li>
+				<li><hr></li>
+				<li class="nav-item">
+					<a class="nav-link" href="formAllServices">ALL SERVICES</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="formServiceAddress">SERVICE ADDRESS</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>
